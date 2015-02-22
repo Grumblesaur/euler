@@ -32,16 +32,11 @@ def square_of_sum(x):
 	squaresum *= squaresum
 	return squaresum
 
-num = raw_input("Find sum square difference for first n integers: ")
-
-if num == "":
-	num = 100
-else:
-	num = int(num)
+num = 100
 
 difference = square_of_sum(num) - sum_of_squares(num)
 
-sys.stdout.write("The sum square difference of ")
+sys.stdout.write("The sum square difference of numbers 1-")
 sys.stdout.write(str(num))
 sys.stdout.write(" is ")
 sys.stdout.write(str(difference))
