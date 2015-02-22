@@ -12,9 +12,9 @@ inc = lambda x: x + 1
 loop_max = math.factorial(20)
 
 # don't need to bother with the factor numbers
-i = 21
+i = 2520
 
-factors = [16, 9, 5, 7, 11, 13, 17, 19]
+factors = [11, 13, 14, 16, 17, 18, 19, 20]
 
 found = False
 
@@ -30,7 +30,7 @@ while i < loop_max and found == False:
 	if found == True:
 		smallest = i
 	elif found == False:
-		i = inc(i)
+		i += 2520
 
 sys.stdout.write("The smallest number divisible by all numbers 1-20 is: ")
 
