@@ -3,9 +3,6 @@
 
 import sys
 
-if sys.version_info >= (3,0):
-	raw_input = input
-
 # Sum square difference
 # The sum of the squares of the first ten natural numbers is
 	# 1² + 2² + ... + 10² = 385
