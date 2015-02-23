@@ -1,42 +1,45 @@
-import sys, math
+import sys
 
-# 2050 is the smallest number that can be divided by each of the
+# 2520 is the smallest number that can be divided by each of the
 # numbers from 1 to 10 without any remainder. What is the smallest
 # positive number that is evenly divisible by all of the numbers
 # from 1 to 20?
 
-inc = lambda x: x + 1
+# Use the 1-10 solution as a start point, as 1-20's solution
+# will have to be divisible by it.
+i = 2520
 
-# stop upon reaching 20! since it's obviously divisible by all
-# numbers 1 through 20, but is almost certainly not the smallest
-loop_max = math.factorial(20)
+# Use non-redundant factors.
+factors = [11, 13, 14, 16, 17, 18, 19, 20]
 
-# don't need to bother with the factor numbers
-i = 21
-
-factors = [16, 9, 5, 7, 11, 13, 17, 19]
-
+# Create variable for loop termination
 found = False
 
-smallest = -1
+# Initiate variable for smallest number divisible by 1-20.
+smallest = 0
 
-while i < loop_max and found == False:
+# Loop to find solution
+while found == False:
 	for j in range(0, len(factors)):
+		# If the current number is divisible by a factor,
+		# try the next factor.
 		if i % factors[j] == 0:
 			found = True
+		# If the current number isn't divisible by a factor,
+		# try the next number.
 		elif i % factors[j] != 0:
 			found = False
 			break
 	if found == True:
 		smallest = i
 	elif found == False:
-		i = inc(i)
+		# Increment by a number that's guaranteed to be divisible
+		# by numbers 1-10, which a number divisible by 1-20 must
+		# also be.
+		i += 2520
+
+# It's safe to lose the additional while-loop condition since
+# the program is mathematically guaranteed to exit.
 
 sys.stdout.write("The smallest number divisible by all numbers 1-20 is: ")
-
-if smallest != -1:
-	sys.stdout.write(str(smallest))
-else:
-	sys.stdout.write(str(loop_max))
-
-sys.stdout.write("\n Program finished. \n")
+sys.stdout.write(str(smallest))
