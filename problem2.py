@@ -28,7 +28,6 @@ i = 1
 
 while val <= 4000000:
 	val = fibonacci(i)
-	print val
 	if val % 2 == 0:
 		total += val
 	i += 1
