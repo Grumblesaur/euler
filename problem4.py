@@ -1,5 +1,8 @@
 import sys
 
+if sys.version_info >= (3,0):
+	xrange = range
+
 # A palindromic number reads the same both ways. The largest palidromic
 # number made from the product of two 2-digit numbers is 9009 = 91 x 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
