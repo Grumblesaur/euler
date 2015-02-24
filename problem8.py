@@ -1,5 +1,8 @@
 import sys
 
+if sys.version_info >= (3,0):
+	xrange = range
+
 # The four adjacent digits in the following 1000-digit number that have the
 # greatest product are 9 x 9 x 8 x 9 = 5832.
 

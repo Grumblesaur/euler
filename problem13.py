@@ -1,5 +1,8 @@
 import sys
 
+if sys.version_info >= (3,0):
+	xrange = range
+
 # Work out the first ten digits of the sum of the following one-hundred
 # 50-digit numbers.
 
