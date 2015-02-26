@@ -22,8 +22,7 @@ if sys.version_info >= (3,0):
 
 # NOTE: Once the chain starts, the terms are allowed to surpass one million.
 
-def collatz(start):
-	curr = start
+def collatz(curr):
 	
 	sequenceLength = 1
 	
