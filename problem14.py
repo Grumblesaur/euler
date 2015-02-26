@@ -51,6 +51,6 @@ for i in xrange(2, 1000000):
 		bestLength = currentLength
 		bestStart = i
 
-sys.stdout.write("The longest Collatz sequence with a starting value \n")
-sys.stdout.write("below 1,000,000 begins with "+ str(bestStart) +" and \n")
+sys.stdout.write("The longest Collatz sequence with a starting value ")
+sys.stdout.write("below 1,000,000\nbegins with "+ str(bestStart) +" and ")
 sys.stdout.write("has length " + str(bestLength) + '\n')
