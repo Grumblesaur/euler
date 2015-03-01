@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 import sys
 
+if sys.version_info >= (3,0):
+	xrange = range
+
 # The first known prime found to exceed one million digits was discovered
 # in 1999, and is a Mersenne prime number of the form 2⁶⁹⁷²⁵⁹³ - 1; it
 # contains exactly 2,098,960 digits. Subsequently, other Mersenne primes of
