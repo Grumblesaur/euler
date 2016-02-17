@@ -21,12 +21,9 @@ if sys.version_info >= (3,0):
 
 def is_digit_fifth_power(n):
 	digits = str(n)
-	
 	digitTotal = 0
-	
 	for i in digits:
 		digitTotal += int(i) ** 5
-	
 	return digitTotal == n
 
 total = 0

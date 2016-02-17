@@ -1,5 +1,6 @@
 import sys
 from math import sqrt
+import helper
 
 if sys.version_info >= (3,0):
 	xrange = range
@@ -9,17 +10,6 @@ if sys.version_info >= (3,0):
 # primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
 
 # How many circular primes are there below one million?
-
-# Borrow is_prime( ) function from Problem 10's solution:
-def is_prime(n):
-	if n <= 3:
-		return n >= 2
-	if (n % 2 == 0 or n % 3 == 0):
-		return False
-	for k in xrange(5, int(sqrt(n)) + 1, 6):
-		if n % k == 0 or n % (k + 2) == 0:
-			return False
-	return True
 
 # Variable to track number of circular primes
 count = 0
@@ -31,7 +21,7 @@ for i in xrange(2, 1000000):
 	length = len(temp)
 	# Rotate number until we either find a non-prime or
 	# rotate all the way around to start again.
-	while is_prime(int(temp)) and rotations < length:
+	while helper.is_prime(int(temp)) and rotations < length:
 		temp = temp[1:] + temp[0]
 		rotations += 1
 	# Increment the count if we find a circular prime

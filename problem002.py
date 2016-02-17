@@ -1,4 +1,5 @@
 import sys
+import helper
 
 if sys.version_info >= (3,0):
 	xrange = range
@@ -12,25 +13,12 @@ if sys.version_info >= (3,0):
 # Total variable to track sum
 total = 0
 
-def fibonacci(n):
-	if (n <= 1):
-		return n
-	curr = 2
-	prev = 1
-	
-	for i in range (2, n - 1):
-		temp = curr
-		curr += prev
-		prev = temp
-	
-	return curr
-
 # Term iterator
 val = 2
 i = 1
 
 while val <= 4000000:
-	val = fibonacci(i)
+	val = helper.fibonacci(i)
 	if val % 2 == 0:
 		total += val
 	i += 1

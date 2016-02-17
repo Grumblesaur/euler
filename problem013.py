@@ -110,8 +110,8 @@ bignums = [
 
 sum_of_bignums = 0
 
-for i in xrange(0, len(bignums)):
-	sum_of_bignums += bignums[i]
+for i in bignums:
+	sum_of_bignums += i
 
 sys.stdout.write("Sum of all bignums is: \n")
 sys.stdout.write(str(sum_of_bignums) + '\n')

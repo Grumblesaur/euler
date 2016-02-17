@@ -18,7 +18,7 @@ def fibonacci(n):
 		prev = temp
 	return curr
 
-def is_prime(n, prime_list):
+def is_prime(n):
 	limit = sqrt(n)
 	for i in prime_list:
 		if n % i == 0:

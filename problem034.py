@@ -20,21 +20,21 @@ for i in xrange(3, LOOP_MAX):
 	digits = str(i)
 	
 	# create list of factorials of digits
-	digitFactorials = []
+	digit_factorials = []
 	
 	# create total-of-digit-factorials variable
-	factTotal = 0
+	factorial_total = 0
 	
 	# append factorial values to list
 	for j in xrange(0, len(digits)):
-		digitFactorials.append(factorial(int(digits[j])))
+		digit_factorials.append(factorial(int(digits[j])))
 	
 	# sum factorials
-	for k in xrange(0, len(digitFactorials)):
-		factTotal += digitFactorials[k]
+	for k in xrange(0, len(digit_factorials)):
+		factorial_total += digit_factorials[k]
 	
 	# add to total if the number is like 145
-	if i == factTotal:
+	if i == factorial_total:
 		total += i
 	
 total = str(total) + '\n'

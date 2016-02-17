@@ -1,5 +1,5 @@
 import sys
-
+import helper
 # The Fibonacci sequence is defined by the recurrence relation:
 	# F_n = F_n-1 + F_n-2, where F_1 = 1 and F_2 = 1.
 
@@ -20,26 +20,11 @@ import sys
 # The 12th term, F_12, is the first term to contain three digits.
 # What is the first term in the Fibonacci sequence to contain 1000 digits?
 
-# Modify fibonacci( ) function borrowed from problem 2.
-def fibonacci(n):
-	if n <= 1:
-		return n
-	
-	curr = 1
-	prev = 1
-	
-	for i in xrange(1, n - 1):
-		temp = curr
-		curr += prev
-		prev = temp
-		
-	return curr
-
 term = 1
 found = False
 
 while found == False:
-	if len(str(fibonacci(term))) >= 1000:
+	if len(str(helper.fibonacci(term))) >= 1000:
 		found = True
 	else:
 		term += 1
